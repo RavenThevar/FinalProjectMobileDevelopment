@@ -83,7 +83,7 @@ class PostBloc extends Bloc<PostEvent, PostState> {
       })
       );
 
-      yield LoggingIn();
+      //yield LoggingIn();
     }
   }
 
