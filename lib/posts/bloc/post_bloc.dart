@@ -6,12 +6,12 @@ import 'package:bloc_concurrency/bloc_concurrency.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/cupertino.dart';
 import '../posts.dart';
-import 'package:http/http.dart' as http;
 import 'package:stream_transform/stream_transform.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 
 part 'post_event.dart';
 part 'post_state.dart';
+part 'post_loggingIn_state.dart';
 
 // class PostBloc extends Bloc<PostEvent, PostState>{
 //   PostBloc() : super(const PostState()) {
@@ -83,7 +83,7 @@ class PostBloc extends Bloc<PostEvent, PostState> {
       })
       );
 
-      // yield LoggingIn()
+      yield LoggingIn();
     }
   }
 
@@ -143,3 +143,4 @@ class PostBloc extends Bloc<PostEvent, PostState> {
   //   throw Exception('error fetching posts');
   // }
 }
+
