@@ -20,6 +20,7 @@ class _PostsListState extends State<PostsList> {
   Widget build(BuildContext context) {
     return BlocBuilder<PostBloc, PostState>(
       builder: (context, state) {
+        print(PostStatus.success);
         switch (state.status) {
           case PostStatus.failure:
             return const Center(child: Text('failed to fetch posts'));

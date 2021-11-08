@@ -3,7 +3,7 @@ part of 'post_bloc.dart';
 enum PostStatus { initial, success, failure }
 
 class PostState extends Equatable {
-  const PostState({
+  PostState({
     this.status = PostStatus.initial,
     this.posts = const <Post>[],
     this.hasReachedMax = false,
@@ -12,6 +12,7 @@ class PostState extends Equatable {
   final PostStatus status;
   final List<Post> posts;
   final bool hasReachedMax;
+  bool isFetching = false;
 
   PostState copyWith({
     PostStatus? status,

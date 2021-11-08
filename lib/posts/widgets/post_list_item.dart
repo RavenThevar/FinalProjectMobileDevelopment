@@ -10,13 +10,18 @@ class PostListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return Material(
-      child: ListTile(
-        leading: Text('${post.id}', style: textTheme.caption),
-        title: Text(post.title),
-        isThreeLine: true,
-        subtitle: Text(post.body),
-        dense: true,
-      ),
+      child: Column(
+        children:[ 
+          //NetworkImage
+          ListTile(
+          leading: Text('${post.id}', style: textTheme.caption),
+          title: Text(post.title),
+          isThreeLine: true,
+          subtitle: Text(post.description),
+          dense: true,
+          onTap: () {},
+        ),
+        ]),
     );
   }
 }

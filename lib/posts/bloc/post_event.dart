@@ -6,3 +6,17 @@ abstract class PostEvent extends Equatable {
 }
 
 class PostFetched extends PostEvent {}
+
+class FetchPosts extends PostEvent {
+  bool isFetching = false;
+
+  FetchPosts(bool bool);
+}
+
+class LogIn extends PostEvent {
+  LogIn(this.author);
+
+  String author;
+}
+
+// class  extends
